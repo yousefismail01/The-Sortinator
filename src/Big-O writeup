@@ -1,0 +1,54 @@
+                                BIG-0 ANALYSIS FOR HEAP:
+
+                                        add()
+ this initial check that verifies that the sortinator is actually in the accepting
+ state runs in constant time. Adding an element to the heap and finding its position
+ runs in constant time. The while loop that compares all the positions runs in constant
+ time. positioning assignment runs in constant time.
+
+ the collectionsSwap() method runs in linear time.
+
+ the method runs in linear time: O(1) * O(n) * O(1) = O(n)
+ ***********************************************************
+                                    switchState()
+ changing the accepting state runs in constant time. 0(1)
+ ***********************************************************
+                                    removeSmallest()
+ when the method check if the heap is empty or if the sortinator is in a valid accepting state - constant time
+ when retrieving the smallest node, the removal of nodes, or setting - constant time
+ makeProperHeapUnderIndex(0) runs in O(logn).
+
+ runs in O(logn): //0(1)) + 0(1) + 0(1) + 0(logn) = 0(logn)
+
+ this run time can get exponentially longer with the addition of inputs.
+
+
+
+
+
+                                 BIG-0 ANALYSIS FOR LAZY:
+
+  add()
+  the adding of elements to the contents list runs in constant time.
+  the method runs in constant time: 0(1)
+  ***********************************************************
+  switchState()
+  changing the accepting state runs in constant time. 0(1)
+  ***********************************************************
+  removeSmallest()
+  when the smallestThusFar retrieves the element at index 0, it runs in constant time.
+  the for loop that compares the elements within the array runs in linear time.
+
+
+  runs in  0(n)  :0(1)+ 0(1) + 0(n)
+
+
+  I think lazyImpl would be ideal for clients who expect to be adding frequently due to the
+  constant runtime. If the client was intending on switching frequently or removing, then
+  heapImpl is the ideal choice.
+
+
+
+
+
+
